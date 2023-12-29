@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nusantara_android_developer_test/screens/register.dart';
 import 'package:nusantara_android_developer_test/utils/font.dart';
 import 'package:nusantara_android_developer_test/widgets/button.dart';
 import 'package:nusantara_android_developer_test/widgets/header.dart';
