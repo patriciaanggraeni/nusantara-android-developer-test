@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1080510314949",
+    "project_id": "nusantara-internship-test",
+    "storage_bucket": "nusantara-internship-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1080510314949:android:3595a17d4eed3ec51333ac",
+        "android_client_info": {
+          "package_name": "com.example.nusantara_android_developer_test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1080510314949-lqmkb04tdg2vqpfr5cjmj564sv54e3br.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCs9tK6AB9fgy7I1Jfsf-NXG1p9b8t_xDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1080510314949-lqmkb04tdg2vqpfr5cjmj564sv54e3br.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1080510314949-fofdp4ge94vbastnah9u1ekb8fmlc1l7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.nusantaraAndroidDeveloperTest"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
