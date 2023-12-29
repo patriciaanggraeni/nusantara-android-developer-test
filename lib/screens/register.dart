@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:nusantara_android_developer_test/screens/login.dart';
 import 'package:nusantara_android_developer_test/utils/font.dart';
 import 'package:nusantara_android_developer_test/widgets/button.dart';
 import 'package:nusantara_android_developer_test/widgets/header.dart';
@@ -76,7 +78,9 @@ class Register extends StatelessWidget {
                 const SizedBox(height: 15,),
                 CustomButton(
                   text: "Sign in", 
-                  callback: () {},
+                  callback: () {
+                    Get.to(const Login());
+                  },
                 ),
               ],
             ),
