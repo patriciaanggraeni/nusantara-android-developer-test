@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nusantara_android_developer_test/utils/font.dart';
+import 'package:nusantara_android_developer_test/utils/util.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, required this.text, required this.callback});

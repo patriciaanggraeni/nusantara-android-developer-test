@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:nusantara_android_developer_test/utils/util.dart';
-import 'package:nusantara_android_developer_test/controllers/firebase_auth_controller.dart';
 
 class RegisterController extends GetxController {
   final TextEditingController _username = TextEditingController();
