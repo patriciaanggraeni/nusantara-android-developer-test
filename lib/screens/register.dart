@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nusantara_android_developer_test/screens/login.dart';
-import 'package:nusantara_android_developer_test/utils/font.dart';
+import 'package:nusantara_android_developer_test/utils/util.dart';
 import 'package:nusantara_android_developer_test/widgets/button.dart';
 import 'package:nusantara_android_developer_test/widgets/header.dart';
 import 'package:nusantara_android_developer_test/widgets/text_form.dart';
+import 'package:nusantara_android_developer_test/controllers/register_controller.dart';
 
 class Register extends StatelessWidget {
   const Register({super.key});
 
   @override
   Widget build(BuildContext context) {
-    TextEditingController username = TextEditingController();
-    TextEditingController phoneNumber = TextEditingController();
-    TextEditingController email = TextEditingController();
-    TextEditingController password = TextEditingController();
+    RegisterController signUpController = Get.put(RegisterController());
 
     return Scaffold(
       appBar: AppBar(
@@ -41,25 +38,25 @@ class Register extends StatelessWidget {
                 ),
                 const SizedBox(height: 25,),
                 CustomTextFormField(
-                  controller: username,
+                  controller: signUpController.username,
                   icon: Icons.person, 
                   hint: "Username",
                 ),
                 const SizedBox(height: 15,),
                 CustomTextFormField(
-                  controller: phoneNumber,
+                  controller: signUpController.phoneNumber,
                   icon: Icons.phone, 
                   hint: "Phone Number",
                 ),
                 const SizedBox(height: 15,),
                 CustomTextFormField(
-                  controller: email,
+                  controller: signUpController.email,
                   icon: Icons.email, 
                   hint: "Email",
                 ),
                 const SizedBox(height: 15,),
                 CustomTextFormField(
-                  controller: password,
+                  controller: signUpController.password,
                   icon: Icons.password, 
                   hint: "Password",
                 ),
@@ -79,7 +76,7 @@ class Register extends StatelessWidget {
                 CustomButton(
                   text: "Sign in", 
                   callback: () {
-                    Get.to(const Login());
+                    Get.back();
                   },
                 ),
               ],
