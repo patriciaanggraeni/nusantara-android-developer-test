@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nusantara_android_developer_test/controllers/firebase_auth_controller.dart';
 import 'package:nusantara_android_developer_test/utils/util.dart';
 import 'package:nusantara_android_developer_test/widgets/button.dart';
 import 'package:nusantara_android_developer_test/widgets/header.dart';
@@ -11,7 +12,7 @@ class Register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    RegisterController signUpController = Get.put(RegisterController());
+    RegisterController registerController = Get.put(RegisterController());
 
     return Scaffold(
       appBar: AppBar(
@@ -38,32 +39,32 @@ class Register extends StatelessWidget {
                 ),
                 const SizedBox(height: 25,),
                 CustomTextFormField(
-                  controller: signUpController.username,
+                  controller: registerController.username,
                   icon: Icons.person, 
                   hint: "Username",
                 ),
                 const SizedBox(height: 15,),
                 CustomTextFormField(
-                  controller: signUpController.phoneNumber,
-                  icon: Icons.phone, 
-                  hint: "Phone Number",
-                ),
-                const SizedBox(height: 15,),
-                CustomTextFormField(
-                  controller: signUpController.email,
+                  controller: registerController.email,
                   icon: Icons.email, 
                   hint: "Email",
                 ),
                 const SizedBox(height: 15,),
                 CustomTextFormField(
-                  controller: signUpController.password,
+                  controller: registerController.password,
                   icon: Icons.password, 
                   hint: "Password",
                 ),
                 const SizedBox(height: 30,),
                 CustomButton(
                   text: "Sign up", 
-                  callback: () {},
+                  callback: () {
+                    FirebaseAuthController.instance.register(
+                      registerController.username.text.trim(),
+                      registerController.email.text.trim(), 
+                      registerController.password.text.trim(),
+                    );
+                  },
                 ),
                 const SizedBox(height: 15,),
                 Text(
